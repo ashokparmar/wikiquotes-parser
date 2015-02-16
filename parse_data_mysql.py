@@ -128,7 +128,7 @@ def parse_article_mysql(article_text):
     
 
     #print page_id, page_title, quotes, categories
-    db = MySQLdb.connect("172.17.42.1","infibeam","infibeam","wikiquote")
+    db = MySQLdb.connect("172.17.42.1","root","root","wikiquote")
     for quote_group in quotes:
         for quote in quotes[quote_group]:
 	    digest = hashlib.md5(page_id+page_title+quote_group+quote+categories).hexdigest()[:HASH_SIZE]
